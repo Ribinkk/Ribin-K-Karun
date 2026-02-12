@@ -148,16 +148,16 @@
 
     <section id="contact" class="contact-section">
         <h2 data-aos="fade-up">Contact <span>Me</span></h2>
-        <form action="#" class="contact-form" data-aos="zoom-in-up">
+        <form action="https://formspree.io/f/xykdejpg" method="POST" class="contact-form" data-aos="zoom-in-up">
             <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number" required>
-                <input type="text" placeholder="Email Subject" required>
+                <input type="number" name="mobile" placeholder="Mobile Number" required>
+                <input type="text" name="subject" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <input type="submit" value="Send Message" class="btn-box">
         </form>
     </section>

@@ -56,6 +56,8 @@ You can easily run this project locally using a simple static file server.
 
 ## 📬 Contact
 
+To make the contact form functional, you must create a form on [Formspree](https://formspree.io/) and replace `YOUR_FORM_ID` in `index.html` with your actual form ID.
+
 Feel free to reach out to me!
 
 *   **GitHub:** [Ribinkk](https://github.com/Ribinkk)
