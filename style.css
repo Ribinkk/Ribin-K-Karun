@@ -520,19 +520,51 @@ section h2 span {
     .navbar a { margin-left: 20px; }
 }
 
+/* Mobile Menu Icon */
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
-    .menu-icon { display: block; }
+    #menu-icon {
+        display: block;
+    }
 
     .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        padding: 10px 4%;
+        padding: 1rem 3%;
         background: var(--bg-color);
         border-top: 1px solid rgba(0,0,0,0.1);
-        display: none; /* Add toggle logic in JS if needed, or stick to simple responsive */
+        display: none;
         flex-direction: column;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    }
+
+    .navbar.active {
+        display: block; /* Show menu when active */
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transform: translateY(-20px); /* Animation start state */
+        opacity: 0;
+        animation: navbarSlide 0.5s ease forwards;
+    }
+    
+    /* Animation for menu items */
+    @keyframes navbarSlide {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
     
     .hero {
@@ -545,15 +577,30 @@ section h2 span {
 
     .hero-img {
         order: 1;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
     }
     
     .hero-img img {
-        width: 80vw;
-        height: 80vw;
+        width: 70vw;
+        height: 70vw;
     }
 
-    .portfolio-container { grid-template-columns: 1fr; }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+
+    .projects-container { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .contact-form .input-box input {
+        width: 100%;
+    }
 }
 
 /* Scroll Top Button */
