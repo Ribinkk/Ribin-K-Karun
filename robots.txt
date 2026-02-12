@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ribinkk.github.io/Ribin-K-Karun/sitemap.xml
